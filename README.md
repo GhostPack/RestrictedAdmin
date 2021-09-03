@@ -6,7 +6,7 @@ Restricted Admin Mode was introduced in Windows 8.1 as an attempt to prevent cre
 
 While Restricted Admin Mode is not enabled by default on systems, we can enable it by setting the value of `DisableRestrictedAdmin` to 0 at `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa`. In order to do this remotely, we could use remote registry, however this is not always enabled on systems (particularly workstations). Instead, we can use the [StdRegProv WMI class](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/regprov/stdregprov) to flip this value remotely. This approach was later expanded by @airzero24 in his [WMIReg](https://github.com/airzero24/WMIReg) project.
 
-The TypeLib GUID of Certify is **79F11FC0-ABFF-4E1F-B07C-5D65653D8952**. This is reflected in the Yara rules currently in this repo.
+The TypeLib GUID of RestrictedAdmin is **79F11FC0-ABFF-4E1F-B07C-5D65653D8952**. This is reflected in the Yara rules currently in this repo.
 
 **I did not invent or figure out any of this**. For more information and references on the work this was built on, see the **References** section at the bottom of this README.
 
